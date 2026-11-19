@@ -1,0 +1,14 @@
+:root { --red: #E60012; --ink: #1a1a1a; --bg: #f7f7f8; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--ink); }
+header { background: var(--red); color: #fff; padding: 18px 24px; }
+header h1 { margin: 0; font-size: 22px; }
+header span { font-size: 13px; opacity: .9; }
+main { max-width: 860px; margin: 24px auto; padding: 0 16px; }
+.card { background: #fff; border-radius: 0; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+label { display: block; margin: 8px 0; font-size: 14px; }
+textarea, input { width: 100%; padding: 8px; border: 1px solid #ccc; font-size: 14px; }
+.row { display: flex; gap: 12px; }
+.row label { flex: 1; }
+button { background: var(--red); color: #fff; border: 0; padding: 10px 24px; font-size: 15px; cursor: pointer; margin-top: 12px; }
+pre { background: #111; color: #e8e8e8; padding: 14px; overflow: auto; font-size: 13px; white-space: pre-wrap; }

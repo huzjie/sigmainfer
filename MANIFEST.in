@@ -1,0 +1,9 @@
+include LICENSE
+include README.md
+recursive-include sigmainfer/web/static *
+recursive-include prompts *
+recursive-include examples *
+recursive-include config *
+recursive-include deploy *
+recursive-include ts-sdk *
+recursive-include tools *

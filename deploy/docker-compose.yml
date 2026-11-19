@@ -1,0 +1,7 @@
+services:
+  sigmainfer:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - SIGMAINFER_CONFIG=/app/config/default.json

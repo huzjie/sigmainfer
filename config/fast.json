@@ -1,0 +1,5 @@
+{
+  "model": {"vocab_size": 256, "dim": 64, "n_heads": 4, "n_layers": 2},
+  "generation": {"max_new_tokens": 64, "block_size": 32, "num_steps": 4,
+                  "sampler": "topk", "top_k": 8}
+}

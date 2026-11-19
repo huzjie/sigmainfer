@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SigmaInfer 控制台</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>SigmaInfer</h1>
+    <span>分块扩散并行解码 · 推理控制台</span>
+  </header>
+  <main>
+    <section class="card">
+      <label for="prompt">Prompt</label>
+      <textarea id="prompt" rows="3">今天想聊聊分块扩散</textarea>
+      <div class="row">
+        <label>块大小 <input id="block_size" type="number" value="16"></label>
+        <label>去噪步数 <input id="num_steps" type="number" value="8"></label>
+        <label>最多生成 <input id="max_new_tokens" type="number" value="64"></label>
+      </div>
+      <button id="run">生成</button>
+    </section>
+    <section class="card">
+      <h2>输出</h2>
+      <pre id="output">（等待生成…）</pre>
+      <pre id="stats"></pre>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

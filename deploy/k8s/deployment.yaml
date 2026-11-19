@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sigmainfer
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sigmainfer
+  template:
+    metadata:
+      labels:
+        app: sigmainfer
+    spec:
+      containers:
+        - name: sigmainfer
+          image: sigmainfer:latest
+          ports:
+            - containerPort: 8000

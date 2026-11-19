@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sigmainfer"
+version = "0.1.0"
+description = "SigmaInfer — Sigma 文本扩散推理引擎：用分块扩散（block diffusion）替代逐 token 自回归，并行生成 token 的高吞吐文本生成运行时。填一份配置即可跑，纯 Python 零依赖内核。"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "SigmaInfer Authors" }]
+keywords = ["diffusion", "text-generation", "block-diffusion", "parallel-decoding", "llm", "inference"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+serve = ["fastapi>=0.100", "uvicorn>=0.23"]
+test = ["pytest>=7.0"]
+dev = ["pytest", "ruff", "mypy"]
+
+[project.scripts]
+sigmainfer = "sigmainfer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/huzjie/sigmainfer"
+Documentation = "https://github.com/huzjie/sigmainfer#readme"
+Repository = "https://github.com/huzjie/sigmainfer"
+
+[tool.setuptools.packages.find]
+include = ["sigmainfer*"]
